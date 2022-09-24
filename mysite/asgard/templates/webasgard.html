@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+      <head>
+             <title>Page Title</title>
+      </head>
+
+<body>
+
+
+    <div  style="height: 100px;text-align: center;padding-top: 20px;padding-bottom:20px;font-size: x-large;" >
+
+          <h1 >A Website About Asgard</h1>
+
+   </div>
+
+   <hr>
+
+
+
+{% for x in GeoM%}
+
+<div style="height: 35px; padding-top: 2px; text-align: center;">
+    <!--geography dialog-->
+<dialog id="geo" style="width:50% ;">
+    <p>
+        <q>
+            {{x.description}}
+        </q>
+        <button id="hide">close</button>
+    </p>
+</dialog>
+    <button  id="show" style="margin-right: 35px;margin-left: 35px;width: 200px;height: 30px;font-size: large;" name="geograhpy" type="button">{{x.title}}</button>
+     <!--geography dialog-->
+{% endfor %}
+
+
+{% for x in HisM%}
+    <!--history dialog-->
+    <dialog id="his" style="width:50% ;">
+        <p>
+            <q>
+                {{x.description}}
+            </q>
+            <button id="hisclose">close</button>
+        </p>
+    </dialog>
+        <button  id="history" style="margin-right: 35px;margin-left: 35px;width: 200px;height: 30px;font-size: large;" name="history" type="button">{{x.title}}</button>
+{% endfor %}
+     <!--history dialog-->
+
+{% for x in CulM%}
+         <!--culture dialog-->
+         <dialog id="cul" style="width:50% ;">
+            <p>
+                <q>
+                    {{x.description}}
+                </q>
+                <button id="culclose">close</button>
+            </p>
+        </dialog>
+        <button id="culture" style="margin-right: 35px;margin-left: 35px;width: 200px;height: 30px;font-size: large;" name="culture" type="button">{{x.title}}</button>
+          {% endfor %}
+        <!--culture dialog-->
+
+
+<!--language dialog-->
+    {% for x in LanM%}
+<dialog id="lang" style="width:50%;">
+    <p>
+        <q>
+            {{x.description}}
+        </q>
+        <button id="langclose">close</button>
+    </p>
+</dialog>
+<button  id="language" style="margin-right: 35px;margin-left: 35px; width: 200px;height: 30px;font-size: large; "name="language" type="button">{{x.title}}</button>
+    {% endfor %}
+<!--language dialog-->
+
+
+</div>
+
+<hr>
+
+
+
+
+<div style="hegiht=50px, ">
+<!-- geography show and close dialog box-->
+<script type="text/JavaScript">
+    (function()
+      {
+       var dialog=document.getElementById('geo');
+       document.getElementById('show').onclick=function ()
+       {
+        dialog.show();
+       };
+       document.getElementById('hide').onclick=function ()
+       {
+        dialog.close();
+       };
+      }
+    )();
+</script>
+<!-- geography show and close dialog box-->
+
+
+
+<!-- history show and close dialog box-->
+
+<script type="text/JavaScript">
+    (function()
+      {
+       var dialog=document.getElementById('his');
+       document.getElementById('history').onclick=function ()
+       {
+        dialog.show();
+       };
+       document.getElementById('hisclose').onclick=function ()
+       {
+        dialog.close();
+       };
+      }
+    )();
+</script>
+<!-- history show and close dialog box-->
+
+
+
+<!-- culture show and close dialog box-->
+<script type="text/JavaScript">
+    (function()
+      {
+       var dialog=document.getElementById('cul');
+       document.getElementById('culture').onclick=function ()
+       {
+        dialog.show();
+       };
+       document.getElementById('culclose').onclick=function ()
+       {
+        dialog.close();
+       };
+      }
+    )();
+</script>
+<!-- culture show and close dialog box-->
+
+
+<!-- language show and close dialog box-->
+<script type="text/JavaScript">
+    (function()
+      {
+       var dialog=document.getElementById('lang');
+       document.getElementById('language').onclick=function ()
+       {
+        dialog.show();
+       };
+       document.getElementById('langclose').onclick=function ()
+       {
+        dialog.close();
+       };
+      }
+    )();
+</script>
+<!-- language show and close dialog box-->
+</div>
+
+
+
+</body>
+</html>
